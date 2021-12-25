@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  
+}
+
+.container .header{
+
+ display: flex;
+ align-items: center;
+
+ justify-content: space-between;
+}
+
+.container .left img{
+ height: 100px;
+ margin-left: 45px;
+}
+.container .right{
+
+margin-right: 45px;
+
+
+}
+.container .right .language{
+
+ justify-content: center;
+ font-size: 18px;
+ padding: 8px 10px;
+ color: white;
+ background: none;
+ cursor: pointer;
+ margin-right: 15px;
+}
+.container .right .language option{
+ background-color: grey;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.whoIsWatching {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #141414;
+}
+
+
+.main-div {
+
+  
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.main-div h1 {
+  font-size: 56px;
+  letter-spacing: 3px;
+
+}
+
+.memberDiv {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+.memberDiv .btn {
+  height: 10vw;
+
+  width: 10vw;
+
+  border-radius: 5px;
+  border: none;
+
+  margin-top: 4rem;
+  margin-right: 3.5rem;
+  position: relative;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.memberDiv .user1 .btn{
+  background-image: url("./images//user1.jpg");
+ 
+}
+
+.memberDiv .user2 .btn{
+  background-image: url("./images//user2.jpg");
+}
+
+.memberDiv .user3 .btn {
+  background-image: url("./images//user3.jpg");
+}
+.memberDiv .user4 .btn {
+  background-image: url("./images//user4.jpg");
+}
+.memberDiv .btn:hover {
+  box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.9);
+}
+
+.memberDiv .btn span {
+  width: inherit;
+  /* background-color: red; */
+  position: absolute;
+  bottom: -3.5rem;
+  left: 0;
+
+  color: rgb(153, 153, 153);
+  font-size: 16px;
+}
+
+
+/*makes the size of the text smaller after the reaching 1024px*/
+@media (max-width: 1024px) {
+  .main-div h1{
+    font-size: 36px;
+    margin-top: 20px;
+  }
+}
+
+
+/*makes the two columns stack on top of each other instead of next to each other after the reaching 800px */
+@media screen and (max-width: 800px) {
+  .memberDiv {
+    flex: 100%;
+    max-width: 30%;
+  }
+}
+
+
+
+.manageProfile {
+  border: 1px solid grey;
+  color: grey;
+  text-transform: uppercase;
+  padding: 0.8rem 2.6rem;
+  letter-spacing: 0.5rem;
+  font-size: 2.5rem;
+  margin-top: 12rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.manageProfile:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}

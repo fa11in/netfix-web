@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix | Landing Page UI Design</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="user4.css">
+</head>
+
+<body>
+    <header>
+        <a href="users.html" class="logo"> <img src="images/logo.png" alt="NETFLIX"></a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+        </ul>
+
+        <div class="search">
+            <textarea id="text" placeholder="Bored with being the Lord of Hell,the devil relocates to Los Angeles, wherehe opens a nightclub and formsa connection with a homicide detective." rows="1" cols="40" style="background-color: rgba(0, 0, 0, 0.7); color:rgb(255, 255, 255, 0.5);border-radius: 5px;border-color: none;">
+                search
+               </textarea>
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="images/good.jpg" class="lucifer" alt="lucifer">
+        <img src="images/good2.jpg" class="lucifer" alt="lucifer">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <div class="content">
+            <h1 style="color: white;" class="seasonTitle">The Good Doctor</h1>
+            <h4>
+                <span>2017</span>
+                <span><i>16+</i> </span>
+                <span>Seasons 4</span>
+                <span>TV Shows </span>
+            </h4>
+            <p>
+                A talented surgeon with autism and savant syndrome joins a prestigious hospital, where he faces skepticism from both the patients and staff.
+            </p>
+
+            <div class="button">
+                <a href="#"><i class="fas fa-play"></i>Play</a>
+                <a href="#"><i class="fas fa-plus"></i>My List</a>
+            </div>
+
+            <div class="container" style="margin-top: 20px;">
+                <div class="row">
+
+                  <div class="col" style="padding: 5px;">Charecter</div>
+
+                  <div class="col" style="padding: 5px;">Dr. Shaun Murphy</div>
+
+                  <div class="col" style="padding: 5px;">Dr. Aaron Glassman</div>
+
+                  <div class="col" style="padding: 5px;">Dr. Audrey Lim</div>
+
+                  <div class="col" style="padding: 5px;">Dr. Marcus Andrews</div>
+           
+                </div>
+          
+                <div class="row">
+
+                  <div class="col" style="padding: 5px;">Actor</div>
+
+                  <div class="col" style="padding: 5px;" >Freddie Highmore</div>
+          
+                  <div class="col" style="padding: 5px;" >Richard Schiff</div>
+
+                  <div class="col" style="padding: 5px;">Christina Chang</div>
+
+                  <div class="col" style="padding: 5px;" >Hill Harper</div>
+          
+                </div>
+          
+          
+              </div>
+
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="images/play.png" alt="play-button">Watch Trailer</a>
+    </div>
+
+    <div class="trailer">
+        <video src="images/The Good Doctor Season 5 Promo (HD) Wedding Event.mp4" controls="true"></video>
+        <img src="images/close.png" class="close" onclick="toggleVideo();" alt="close-button">
+    </div>
+
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("lucifer");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    
+</body>
+
+</html>

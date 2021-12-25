@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix | Landing Page UI Design</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="user1series.css">
+</head>
+
+<body>
+    <header>
+        <a href="users.html" class="logo"> <img src="images/logo.png" alt="NETFLIX"></a>
+
+
+        <div class="search">
+         
+            <textarea id="text" placeholder="Bored with being the Lord of Hell,the devil relocates to Los Angeles, wherehe opens a nightclub and formsa connection with a homicide detective." rows="1" cols="40" style="background-color: rgba(0, 0, 0, 0.7); color:rgb(255, 255, 255, 0.5);border-radius: 5px;border-color: none;">
+                search
+               </textarea>
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        
+    
+
+
+        
+        <div class="content">
+
+  
+ 
+
+          
+          <div class="memberDiv">
+              <div class="user1">
+                  <a href="https://hdi.zetflix.online/serials/ljucifer/season-01-episode-01/" target="_blank"><button class="btn"><span>1 episode</span></button></a>
+              </div>
+
+              <div class="user2">
+                  <a href="https://hdi.zetflix.online/serials/ljucifer/season-01-episode-02/" target="_blank" ><button class="btn btn-info"><span>2 episode</span></button></a>
+              </div>
+
+              <div class="user3">
+                  <a href="https://hdi.zetflix.online/serials/ljucifer/season-01-episode-03/" target="_blank" ><button class="btn"><span>3 episode</span></button></a>
+              </div>
+
+              <div class="user4">
+                  <a href="https://hdi.zetflix.online/serials/ljucifer/season-01-episode-04/" target="_blank" ><button class="btn"><span>4 episode</span></button></a>
+              </div>
+          
+             
+          </div>
+         
+          
+
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="images/play.png" alt="play-button">Watch Trailer</a>
+
+        
+    </div>
+
+    <div class="trailer">
+        <video src="images/Lucifer Final Season _ Date Announcement _ Netflix.mp4" controls="true"></video>
+        <img src="images/close.png" class="close" onclick="toggleVideo();" alt="close-button">
+    </div>
+ 
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+
+    
+</body>
+
+</html>

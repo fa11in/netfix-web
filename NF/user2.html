@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix | Landing Page UI Design</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="user2.css">
+</head>
+
+<body>
+    <header>
+        <a href="users.html" class="logo"> <img src="images/logo.png" alt="NETFLIX"></a>
+
+
+        <div class="search">
+            <textarea id="text" placeholder="Bored with being the Lord of Hell,the devil relocates to Los Angeles, wherehe opens a nightclub and formsa connection with a homicide detective." rows="1" cols="40" style="background-color: rgba(0, 0, 0, 0.7); color:rgb(255, 255, 255, 0.5);border-radius: 5px;border-color: none;">
+                search
+               </textarea>
+            <i class="fas fa-search"></i>
+        </div>
+    </header>
+
+    <div class="banner">
+        <img src="https://wallpapercave.com/wp/wp4961968.png" class="lucifer" alt="lucifer">
+        <img src="https://images3.alphacoders.com/913/thumb-1920-913028.jpg" class="lucifer" alt="lucifer">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        <div class="content">
+            <h1 style="color: white;" class="seasonTitle">Money Heist</h1>
+            <h4>
+                <span>2017</span>
+                <span><i>18+</i> </span>
+                <span>Seasons 5</span>
+                <span>Criminal TV Shows</span>
+            </h4>
+            <p>
+                When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.
+            </p>
+
+            <div class="button">
+                <a href="https://www.netflix.com/kz/title/80057918" target="_blank"><button class="px-10 py-2.5 text-white bg-red-500">Play</button></a>
+                <a href="https://www.netflix.com/kz/title/80057918"style="margin-left:5px" target="_blank"><button class="px-8 py-1.5 bg-transparent border-2 border-red-500 text-white-500 text-lg hover:bg-red-500 hover:text-white-500 focus:border-4 focus:border-red-300">Continue</button></a>
+            </div>
+
+            <div class="container" style="margin-top: 20px;">
+                <div class="row">
+
+                  <div class="col" style="padding: 5px;">Charecter</div>
+
+                  <div class="col" style="padding: 5px;">The Professor</div>
+
+                  <div class="col" style="padding: 5px;">Tokyo</div>
+
+                  <div class="col" style="padding: 5px;" >Berlin</div>
+
+                  <div class="col" style="padding: 5px;" >Rio</div>
+           
+                </div>
+          
+                <div class="row">
+
+                  <div class="col" style="padding: 5px;">Actor</div>
+
+                  <div class="col" style="padding: 5px;" >Alvaro Morte</div>
+          
+                  <div class="col" style="padding: 5px;" >Úrsula Corberó</div>
+
+                  <div class="col" style="padding: 5px;">Pedro Alonso</div>
+
+                  <div class="col" style="padding: 5px;" >Miguel Herrán</div>
+          
+                </div>
+          
+          
+              </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="images/play.png" alt="play-button">Watch Trailer</a>
+    </div>
+
+    
+
+    <div class="trailer">
+        <video src="images/Money Heist_ Part 5 _ Date Announcement _ Netflix.mp4" controls="true"></video>
+        <img src="images/close.png" class="close" onclick="toggleVideo();" alt="close-button">
+    </div>
+
+
+    <script>
+        function toggleVideo() {
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("lucifer");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+    
+</body>
+
+</html>

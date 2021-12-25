@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="netflix3.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>Netflix</title>
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="left">
+           <a href="netflix1.html"> <img src="images/netflix-logo.png" alt=""></a>
+            </div>
+      
+            <div class="right">
+            <select name="language" class="language">
+                <option value="English">English</option>
+                <option value="Hindi">Русский</option>
+            </select>
+        
+        </div>
+    </div>
+
+    </div>
+    <div class="login-body">
+        <div class="login-box">
+            <h2>Registration</h2>
+            <h2 id="hone">{{Registration()}}</h2>
+            <form>
+                <div class="input-wrap">
+                    <input type="text" class="FullName"  placeholder="Full Name" onchange="myFunc()">
+                </div>
+                <div class="input-wrap">
+                    <input type="text" placeholder="Year">
+                </div>
+                <div class="input-wrap">
+                    <input type="date" placeholder="phone number">
+                </div>
+
+                <div class="input-wrap">
+                <a href="project.html"><button type="submit" style="color: rgb(204, 208, 211);">Finish</button></a>
+                </div>
+
+               
+    
+
+        
+               
+                <div class="support">
+                  
+                        <p><input type="radio" name="question">Male</p>
+                        <p><input type="radio" name="question">Female</p>
+                </div>
+                
+            </form>
+            
+        </div>
+        
+    </div>
+
+
+
+        
+    </div>
+   
+   
+   <script>
+        function myFunc(){
+        document.getElementById("hone").style.opacity = "1";
+        var x = document.getElementsByClassName("FullName")[0];
+        var vue_det = new Vue({
+        el: '.login-body',
+        data:{
+        message: x.value
+        },
+        methods:{
+        Registration: function(){
+        return "Welcome to Netflix: " + this.message;
+        }
+        }
+        });
+        }
+  </script>
+
+
+</body>
+</html>

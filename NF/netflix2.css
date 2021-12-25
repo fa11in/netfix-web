@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    color: white;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(images/фон.jpg);
+}
+
+.container .header{
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.container .left img{
+   height: 100px;
+   margin-left: -150px;
+}
+.container .right{
+
+  margin-right: -150px;
+  
+
+}
+.container .right .language{
+    font-size: 18px;
+    padding: 8px 10px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.container .right .language option{
+   background-color: grey;
+}
+
+@media (max-width: 1024px){
+    .container .header{
+        height: 100px;
+        margin-left: 150px;
+   }
+   .container .right{
+       margin-right: 5px;
+   }
+}
+
+.login-body{
+    padding: 60px;
+
+    
+    max-width: 450px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 50%;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 10px;
+
+    transform: translate(-50%);
+}
+
+.login-body ul{
+    font-size: 32px;
+    color: white;
+    margin-bottom: 25px;
+    margin-left: 25px;
+ 
+}
+.login-body input{
+    height: 50px;
+    width: 100%;
+    border-radius: 3px;
+    color: #fff;
+    background: #333;
+    border: 1px solid #333;
+    padding-left: 15px;
+    box-sizing: border-box;
+    outline: none;
+    
+}
+.input-wrap{
+    margin-bottom: 25px;
+}
+
+.login-body button{
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    background: #e50914;
+    border-radius: 3px;
+    
+    font-size: 16px;
+    border: 1px solid #e50914;
+    margin-bottom: 40px;
+}
+.support{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.support input{
+    width: 15px;
+    height: 15px;
+}
+.remember{
+    display: flex;
+    align-items: center;
+}
+.remember span{
+    margin-right: 10px;
+    height: 50px;
+}
+
+
+
+
+
+
+
